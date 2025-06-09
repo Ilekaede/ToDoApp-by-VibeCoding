@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Coding Standards
+
+## TypeScript/JavaScript
+1. 型定義は明示的に行う
+2. インターフェースは`I`プレフィックスを使用（例：`ITodo`）
+3. クラス名はパスカルケース（例：`TodoService`）
+4. 変数・関数名はキャメルケース（例：`getTodoById`）
+
+## API Design
+1. RESTful APIの原則に従う
+2. エンドポイントは`/api/v1/`プレフィックスを使用
+3. HTTPメソッドは適切に使用（GET, POST, PUT, DELETE）
+4. レスポンスは一貫した形式を維持
+
+## Error Handling
+1. エラーは適切なHTTPステータスコードと共に返す
+2. エラーメッセージは具体的で分かりやすく
+3. 機密情報はエラーメッセージに含めない
+
+## Database
+1. マイグレーションは必ずPrismaを使用
+2. クエリはPrisma Clientを使用
+3. トランザクションは適切に使用
+
+## Testing
+1. 各APIエンドポイントにテストを作成
+2. エッジケースを考慮したテスト
+3. モックデータは適切に管理

@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure
+
+## Directory Structure
+- `src/`: ソースコードのメインディレクトリ
+  - `index.ts`: アプリケーションのエントリーポイント
+  - `test-db.ts`: データベース接続テスト用スクリプト
+- `prisma/`: Prisma関連ファイル
+  - `schema.prisma`: データベーススキーマ定義
+  - `migrations/`: データベースマイグレーションファイル
+
+## Key Files
+- [package.json](mdc:package.json): プロジェクトの依存関係と設定
+- [tsconfig.json](mdc:tsconfig.json): TypeScript設定
+- [.env](mdc:.env): 環境変数設定（Git管理対象外）
+
+## Development Rules
+1. 新しい機能は`src/`ディレクトリ内に適切なファイルを作成
+2. データベースの変更は必ずPrismaスキーマを更新
+3. 環境変数の追加は`.env`ファイルに記録
