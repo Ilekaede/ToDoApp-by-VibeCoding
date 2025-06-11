@@ -8,8 +8,11 @@ alwaysApply: false
 ## Branch Strategy
 1. `main`: メインブランチ（本番環境用）
 2. 機能開発は`feature/`プレフィックスのブランチで行う
-   - 例：`feature/add-todo-api`
-   - 例：`feature/implement-auth`
+   - 命名規則：`feature/ナンバリング-簡単な処理内容`
+     - 例：`feature/01-crud-todo-api`
+     - 例：`feature/02-add-auth`
+   - ブランチの粒度は「CRUD開発」程度のまとまりを推奨
+   - 大きな機能は複数の小さなブランチに分割しても良い
 
 ## Commit Rules
 1. コミットメッセージの形式：
