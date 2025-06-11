@@ -121,7 +121,9 @@ app.put("/todos/:id", async (c) => {
     } catch (e) {
       throw new ValidationError("Invalid JSON format");
     }
-    const validatedData = validateTodoInput(body);
+
+    // updateTodoSchemaを使用してバリデーション
+    const validatedData = updateTodoSchema.parse(body);
 
     const todo = await prisma.todo.update({
       where: { id },
